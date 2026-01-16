@@ -124,7 +124,27 @@ Comprehensive system architecture showing:
   8. Results display with similarity scores
   9. Try again option
 
----
+
+### Embedded Demo & Diagram
+
+Play the demo directly here (if supported by GitHub) or download it:
+
+<video src="Document/Demo.mp4" controls width="720">
+Your browser does not support the video tag. Download the demo: [Demo.mp4](Document/Demo.mp4)
+</video>
+
+Application workflow diagram:
+
+<p align="center">
+   <img src="Document/Flow.png" alt="Application Flow" width="900" />
+</p>
+
+If any screenshots referenced above are missing from the repository, add them to `web/Document/` and embed them like this:
+
+```markdown
+![Register Your Face](Document/Register%20Your%20Face.png)
+```
+
 
 ## 🏗️ Architecture
 
