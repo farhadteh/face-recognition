@@ -74,10 +74,14 @@ class SCRFD:
         if self.session is None:
             assert self.model_file is not None
             assert osp.exists(self.model_file)
-            self.session = onnxruntime.InferenceSession(self.model_file, providers=['CUDAExecutionProvider'])
+            # Try CUDA first, fallback to CPU if not available
+            try:
+                self.session = onnxruntime.InferenceSession(self.model_file, providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+            except:
+                self.session = onnxruntime.InferenceSession(self.model_file, providers=['CPUExecutionProvider'])
         self.center_cache = {}
         self.nms_thresh = 0.4
-        self.det_thresh = 0.5
+        self.det_thresh = 0.35
         self._init_vars()
 
     def _init_vars(self):
@@ -269,8 +273,8 @@ class SCRFD:
         return det, kpss
 
     def autodetect(self, img, max_num=0, metric='max'):
-        bboxes, kpss = self.detect(img, input_size=(640, 640), thresh=0.5)
-        bboxes2, kpss2 = self.detect(img, input_size=(128, 128), thresh=0.5)
+        bboxes, kpss = self.detect(img, input_size=(640, 640), thresh=0.35)
+        bboxes2, kpss2 = self.detect(img, input_size=(128, 128), thresh=0.35)
         bboxes_all = np.concatenate([bboxes, bboxes2], axis=0)
         kpss_all = np.concatenate([kpss, kpss2], axis=0)
         keep = self.nms(bboxes_all)
