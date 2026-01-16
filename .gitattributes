@@ -1,2 +1,4 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
 web/Document/Demo.mp4 filter=lfs diff=lfs merge=lfs -text
 web/pages/face/w600k_r50.onnx filter=lfs diff=lfs merge=lfs -text
