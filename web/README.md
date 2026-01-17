@@ -125,13 +125,14 @@ Comprehensive system architecture showing:
   9. Try again option
 
 
+
 ### Embedded Demo & Diagram
 
-Play the demo directly here (if supported by GitHub) or download it:
+Play the demo directly here (GitHub does not reliably render HTML5 video tags). Download or open the demo:
 
-<video src="Document/Demo.mp4" controls width="720">
-Your browser does not support the video tag. Download the demo: [Demo.mp4](Document/Demo.mp4)
-</video>
+<p align="center">
+  <a href="Document/Demo.mp4">Download / Open Demo Video — Demo.mp4</a>
+</p>
 
 Application workflow diagram:
 
@@ -139,11 +140,22 @@ Application workflow diagram:
    <img src="Document/Flow.png" alt="Application Flow" width="900" />
 </p>
 
+Application screenshots:
+
+<p align="center">
+   <img src="Document/face-main-page.png" alt="Face Main Page" width="720" />
+</p>
+
+<p align="center">
+   <img src="Document/Register%20Your%20Face.png" alt="Register Your Face" width="720" />
+</p>
+
+<p align="center">
+   <img src="Document/Identify-Faces.png" alt="Identify Faces" width="720" />
+</p>
+
 If any screenshots referenced above are missing from the repository, add them to `web/Document/` and embed them like this:
 
-```markdown
-![Register Your Face](Document/Register%20Your%20Face.png)
-```
 
 
 ## 🏗️ Architecture
