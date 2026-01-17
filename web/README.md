@@ -128,10 +128,12 @@ Comprehensive system architecture showing:
 
 ### Embedded Demo & Diagram
 
-Play the demo directly here (GitHub does not reliably render HTML5 video tags). Download or open the demo:
+Play the demo directly here (GitHub does not reliably render HTML5 video tags). You can open the local file, view it on GitHub, or download the raw file:
 
 <p align="center">
-  <a href="Document/Demo.mp4">Download / Open Demo Video — Demo.mp4</a>
+   <a href="web/Document/Demo.mp4">Open Demo Video (relative link)</a> •
+   <a href="https://github.com/suyogbargule/face-recognition/blob/main/web/Document/Demo.mp4">View on GitHub</a> •
+   <a href="https://raw.githubusercontent.com/suyogbargule/face-recognition/main/web/Document/Demo.mp4">Download raw MP4</a>
 </p>
 
 Application workflow diagram:
@@ -143,7 +145,7 @@ Application workflow diagram:
 Application screenshots:
 
 <p align="center">
-   <img src="Document/face-main-page.png" alt="Face Main Page" width="720" />
+   <img src="Document/Face-main-page.png" alt="Face Main Page" width="720" />
 </p>
 
 <p align="center">
